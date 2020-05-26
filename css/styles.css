@@ -188,6 +188,7 @@ a:hover {
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr;
   background-color: #55555510;
+  height:300px;
   margin-bottom: 50px;
 }
 #project1 h2 {
