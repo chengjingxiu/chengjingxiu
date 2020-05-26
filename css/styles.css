@@ -1,0 +1,324 @@
+/* ------------------------------------   Color Palette   ------------------------------------*/
+/* 
+Black       #161C1C
+Dark Grey   #383838
+Grey        #555555
+Light Grey  #D3D3D3
+Dark White  #F5F5F5
+White       #FCFAFA 
+*/
+
+/* ------------------------------------   Global Styles   ------------------------------------*/
+html {
+  box-sizing: border-box;
+  background-color: #fcfafa;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #161C1C;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+h1{
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 1;
+  margin: 0 0 25px;
+}
+h2 {
+  font-size: 36px;
+  font-weight: 600;
+}
+h3{
+  font-size: 18px;
+  font-weight: 600;
+}
+.images{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.images figure {
+  margin: 0;
+  width: 480px;
+  margin: 20px 0 30px;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+figcaption{
+  font-size: 14px;
+  font-style: italic;
+  color: #555555;
+  text-align: center;
+}
+ul {
+  margin: 0;
+}
+li {
+  margin: 0 0 8px 0;
+}
+a {
+  color: #555555;
+  text-decoration: none;   /* remove underline */
+}
+a:hover {
+  font-weight: 600;
+}
+
+/*---  Headings ---*/
+.title_description {
+  font-size: 18px;
+  font-style: italic;
+}
+.section h2:before {
+  display: block;
+  content: "";
+  border-bottom: 2px solid #d3d3d3;
+  width: 60px;
+  margin-bottom: 20px;
+  padding-top: 15px;
+}
+.section h2 {
+  text-transform: uppercase;
+  margin: 40px 0 20px;
+  font-family: Raleway;
+  color: #555555;
+  font-size: 42px;
+}
+
+/*---  End of Page ---*/
+.end_header {
+  margin: 100px 0 30px;
+  font-size: 24px;
+  font-weight: normal;
+  color: #161C1C;
+  border-top: 2px solid #161C1C;
+  padding-top: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.page_end {
+  display: flex;
+  justify-content: space-between;
+}
+.end_container {
+  position: relative;
+  width: 470px;
+  padding: 50px 0;
+  background-color: #383838;
+  text-align: center;
+}
+.end_link {
+  font-size: 32px; 
+  font-family: Raleway, 'Open Sans', sans-serif; 
+  color: #f5f5f5;
+}
+.back, .next{
+  position: absolute;
+  top: 0px;
+  font-size: 18px;
+  font-weight:lighter; 
+  color: #d3d3d3;
+  text-transform: uppercase;
+}
+.back {
+  left: 20px;
+}
+.next{
+  right: 20px;
+}
+
+/* ------------------------------------   Profile   ------------------------------------*/
+.profile{
+  display: grid;
+  grid-template-columns: 300px 700px; 
+  margin-bottom: 40px;
+}
+#photo {
+  grid-column: 1/2;
+  grid-row: 1/4;
+  vertical-align: middle;
+  width: 260px;
+  height: 260px;
+  border: 5px solid #161C1C;
+  border-radius: 50%;
+}
+#hi {
+  grid-column: 2/3;
+  text-align: right;
+  margin: 0;
+  font-size: 100px;
+  font-style: italic;
+  line-height: 1;
+}
+#description {
+  grid-column: 2/3;
+  margin: 30px 0 0;
+  font-size: 21px;
+  color: #383838;
+}
+#opportunities {
+  grid-column: 2/3;
+  font-size: 16px;
+  color: #383838;
+}
+.profile a, .title a {
+  border-bottom: 1px solid #555555;       /* underline */
+}
+/* ------------------------------------   Projects   ------------------------------------*/
+#projectheading {
+  font-size: 24px;
+  font-weight: normal;
+  color: #555555;
+  font-size: 24px;
+  text-align: left;
+  border: none;
+}
+#project1 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  background-color: #55555510;
+  height:300px;
+  margin-bottom: 50px;
+}
+#project1 h2 {
+  grid-row: 1;
+  grid-column: 1/2;
+  margin: 0 100px;
+  align-self: flex-end;
+  font-size: 50px;
+  font-weight: 600;
+  color: #161C1C;
+}
+#project1 p {
+  grid-row: 2;
+  grid-column: 1/2;
+  margin: 10px 100px;
+  align-self: flex-start;
+  font-size: 18px;
+  color: #383838;
+}
+/* ------------------------------------   CV   ------------------------------------*/
+#resume_instead {
+  font-size: 16px;
+  margin-top: 30px;
+}
+.date_container {
+  display:flex;
+  /* justify-content: space-between; */
+  align-items:baseline;
+    /* background-color: #55555510; */
+}
+.date {
+  font-size: 16px;
+  font-style: italic;
+  margin-left: 15px;
+  font-weight: lighter;
+}
+/*---  Skills ---*/
+#skills p, #skills h3 {
+  display: inline-block;
+}
+/*---  Work ---*/
+.area_of_work {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  margin-bottom: 30px;
+}
+.area_of_work h3 {
+  font-size: 21px;
+  font-weight: lighter;
+  text-transform: uppercase;
+  grid-column: 1/2;
+  grid-row: 1/span 3;
+  align-items: baseline;
+}
+.area_of_work h3:before {
+  content: "";
+  margin-top: 50px;
+}
+.experience {
+  grid-column: 2/3; 
+}
+.experience h4 {
+  font-size: 18px;
+}
+/* ------------------------------------   Interests   ------------------------------------*/
+#music-grid {
+  display: grid;
+  grid-template-columns: 500px 500px;
+  grid-column-gap: 0;
+}
+#music-grid p {
+  grid-column: 1/2;
+  width: 450px;
+  margin: 0 0 16px;
+}
+#music-grid figure {
+  grid-column: 2/3;
+  grid-row: 1/span 4;
+  width: 480px;
+  justify-self: flex-end;
+  margin: auto 0 0;
+}
+
+/* ------------------------------------   Header   ------------------------------------*/
+header {
+  display: flex;
+  align-items: baseline;      /* aligning to the base of vertical cross-axis */
+  margin: 30px 0 50px;
+}
+header a {
+  margin: 0 15px;
+  font-size: 18px;
+}
+#name {
+  margin-left: 0;
+  margin-right: auto;     /* push the rest of the navigation to the right */
+  font-family: "Dancing Script", cursive;
+  font-size: 36px;
+}
+#about {
+  margin-right: 0;
+}
+
+/* ------------------------------------   Footer   ------------------------------------*/
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px 0;
+}
+footer h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+  color: #161C1C;
+}
+footer nav a {
+  margin: 15px 15px;
+  font-size:32px;
+}
+#resumebutton {
+  padding: 5px 25px;
+  border: 3px solid #161C1C;
+  border-radius: 10px;
+  font-size: 16px;
+}
+#copyright {
+  margin: 30px;
+  font-size: 12px;
+  color: #555555c5;
+}
