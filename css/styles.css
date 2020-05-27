@@ -141,7 +141,7 @@ a:hover {
 .profile{
   display: grid;
   grid-template-columns: 300px 700px; 
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 #photo {
   grid-column: 1/2;
@@ -182,6 +182,8 @@ a:hover {
   font-size: 24px;
   text-align: left;
   border: none;
+  position: relative;
+  padding-top: 50px;
 }
 #project1 {
   display: grid;
