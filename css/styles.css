@@ -17,7 +17,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  width: 1000px;
+  width: 960px;
   margin: 0 auto;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
@@ -140,36 +140,38 @@ a:hover {
 /* ------------------------------------   Profile   ------------------------------------*/
 .profile{
   display: grid;
-  grid-template-columns: 300px 700px; 
+  grid-template-columns: 30% 70%; 
   margin-bottom: 50px;
 }
 #photo {
   grid-column: 1/2;
   grid-row: 1/4;
-  vertical-align: middle;
-  width: 260px;
-  height: 260px;
-  border: 5px solid #161C1C;
+  align-self: top;
+  justify-self: center;
+  margin-left: 30px;
+  width: 80%;
+  height: auto;
+  border: 5px solid #383838;
   border-radius: 50%;
 }
 #hi {
   grid-column: 2/3;
-  text-align: right;
-  margin: 0;
-  font-size: 100px;
+  margin: 0 0 0 30px;
+  font-size: 90px;
   font-style: italic;
   line-height: 1;
 }
 #description {
   grid-column: 2/3;
-  margin: 30px 0 0;
-  font-size: 21px;
+  margin: 30px 0 0 30px;
+  font-size: 18px;
   color: #383838;
 }
 #opportunities {
   grid-column: 2/3;
   font-size: 16px;
   color: #383838;
+  margin-left: 30px;
 }
 .profile a, .title a {
   border-bottom: 1px solid #555555;       /* underline */
@@ -312,7 +314,7 @@ footer {
 }
 footer h1 {
   font-size: 28px;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0;
   color: #161C1C;
 }
