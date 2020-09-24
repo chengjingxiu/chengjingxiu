@@ -1,66 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cheng Jingxiu</title>
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script" type="text/css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" type="text/css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" type="text/css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"> 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167585898-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-167585898-1');
-</script>
-<!-- Hotjar Tracking Code for chengjingxiu.com -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:1867041,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cheng Jingxiu Portfolio</title>
+        <link rel="stylesheet" href="css/styles.css"> <!-- Stylesheet -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!-- AOS CSS -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script> <!-- AOS Script -->
+        <script src="script.js" defer></script> <!-- JavaScript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> <!-- jQuery -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167585898-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-167585898-1');
+        </script>
+        <!-- Hotjar Tracking Code for chengjingxiu.com -->
+        <script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:1867041,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        </script>
+    </head>
+
 <body>
-<header class="header">
-    <a id="name" href="http://chengjingxiu.com/">Cheng Jingxiu</a>
-    <a href="http://chengjingxiu.com/#projects">PROJECTS</a>
-    <a id="about" href="http://chengjingxiu.com/about">ABOUT</a>
-</header>
-<main>
-    <div class="profile">
-        <img id="photo" src="images/photo.png" alt="Cheng Jingxiu Photo">
-        <p id="hi">Hi, I'm Jingxiu.</p>
-        <p id="description">I'm an aspiring UX designer/researcher with a Psychology background.<br>I am about to begin an MSc&nbspin&nbspHuman-Computer&nbspInteraction at UCL.</p>
-        <p id="opportunities">Feel free to <!-- check out my projects below, -->
-            learn more <a href="http://chengjingxiu.com/about">about me</a>,
-            download my <a target="_blank" href="resume.pdf">resume</a>,
-            or <a href="mailto:cjingxiu@gmail.com">get in touch</a>.</p>
-    </div>
-    <div id="projects">
-        <h1 id="projectheading">MY PROJECTS</h1>
-        <div id="project1">
-            <h2>In Progress...</h2>
-            <p>I am currently in the process of completing and documenting some of my projects. Please check back again soon!</p>
-        </div>
-    </div>
-</main>
-<footer class="footer">
-    <h1>Let's get in touch!</h1>
-    <nav>
-        <a href="mailto:cjingxiu@gmail.com" class='far fa-envelope'></a>
-        <a target="_blank" href="https://www.linkedin.com/in/chengjingxiu/" class="fab fa-linkedin-in"></a>
-    </nav>
-    <a id="resumebutton" target="_blank" href="resume.pdf">Download Resume</a>
-    <p id="copyright">© 2020 Designed & Developed by Cheng Jingxiu</p>
-</footer>
+    <header>
+        <nav id="navbar">
+            <div id="navbar-container" class="page">
+                <div id="left-nav-container">
+                    <a id="top-nav-name" href="http://chengjingxiu.com/">Cheng Jingxiu</a>
+                    <button class="hamburger hamburger--slider" type="button"> <!-- Hamburger Menu-->
+                        <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div> <!-- Left Nav Container-->
+                <div id="right-nav-container">
+                    <a class ="selected right-nav left-hover hide" id="top-nav-projects" href="http://chengjingxiu.com/#projects">PROJECTS</a>
+                    <a class ="right-nav left-hover hide" id="top-nav-about" href="http://chengjingxiu.com/about">ABOUT</a>
+                </div> <!-- Right Nav Container-->
+            </div> <!-- Page Container-->
+        </nav>
+    </header>
+<div class="page">
+    <main>
+        <div id="profile">
+            <img id="photo" src="images/photo.png" alt="Photo of Jingxiu" width=200px height=auto data-aos="fade-right" data-aos-duration="1500">
+            <h1>Hi, I'm Jingxiu.</h1>
+            <p id="description">I'm a UX designer & researcher with a background in Psychology.<br>I'm currently an MSc Human-Computer Interaction student at UCL.</p>
+            <p id="links">Check out <a class="left-hover" href="http://chengjingxiu.com/#projects">my projects</a>,
+                learn more <a class="left-hover" href="http://chengjingxiu.com/about">about me</a>,
+                or <a class="left-hover" href="mailto:cjingxiu@gmail.com">get in touch</a>!
+            </p>
+        </div> <!-- Profile Container-->
+        <div id="projects">
+            <h1>Featured Projects</h1>
+            <div id="featured">
+                <a href="">
+                    <div class="case-study card">
+                        <img <img src="https://source.unsplash.com/1000x600?water" width=300px height=auto>
+                        <div class=case-study-text>
+                            <h2>Case Study 1</h2>
+                            <p>Case Study Description</p>
+                            <p class="case-study-tag">UX Research, UX Design</p>
+                        </div> <!-- Case Study 1 Text-->
+                    </div> <!-- Case Study 1 Container-->
+                </a>
+                <a href="">
+                    <div class="case-study card">
+                        <img <img src="https://source.unsplash.com/1000x600?nature" width=300px height=auto>
+                        <div class=case-study-text>
+                            <h2>Case Study 2</h2>
+                            <p>Case Study Description</p>
+                            <p class="case-study-tag">UX Research, UX Design</p>
+                        </div> <!-- Case Study 2 Text-->
+                    </div> <!-- Case Study 2 Container-->
+                </a>
+            </div> <!-- Featured Container -->
+        </div> <!-- Projects Container -->
+    </main>
+    <footer>
+        <h1>Let's get in touch!</h1>
+        <nav>
+            <a href="mailto:cjingxiu@gmail.com" aria-label="Send me an email"><i class='far fa-envelope' aria-hidden="true"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/chengjingxiu/" aria-label="View my LinkedIn profile"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+        </nav>
+        <a id="resumebutton" target="_blank" href="resume.pdf">Download Resume</a>
+        <p id="copyright">© 2020 Designed & Developed by Cheng Jingxiu</p>
+    </footer>
+</div> <!-- Page Container -->
 </body>
 </html>

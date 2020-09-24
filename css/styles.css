@@ -1,335 +1,701 @@
-/* ------------------------------------   Color Palette   ------------------------------------*/
-/* 
-Black       #161C1C
-Dark Grey   #383838
-Grey        #555555
-Light Grey  #D3D3D3
-Dark White  #F5F5F5
-White       #FCFAFA 
-*/
+/*---------------------------------   Import Fonts   ---------------------------------*/
+/* Open Sans*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+/* Dancing Script */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+/* Social Icons */
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css"); 
 
-/* ------------------------------------   Global Styles   ------------------------------------*/
+/*---------------------------------   Global Styles   ---------------------------------*/
 html {
-  box-sizing: border-box;
-  background-color: #fcfafa;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
+    box-sizing: border-box;
+    background-color: #FCFAFA;
+    font-size: 16px;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
 body {
-  width: 960px;
-  margin: 0 auto;
-  padding: 0;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  color: #161C1C;
-  line-height: 1.5;
-  overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+    color: #161C1C;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+.page {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
 }
-h1{
-  font-size: 72px;
-  font-weight: 600;
-  line-height: 1;
-  margin: 0 0 25px;
+.wrapper-odd {
+    padding: 4rem 0;
+    background-color: #FCFAFA;
 }
-h2 {
-  font-size: 36px;
-  font-weight: 600;
+.wrapper-even {
+    padding: 4rem 0;
+    background-color: #d3d3d444;
 }
-h3{
-  font-size: 18px;
-  font-weight: 600;
+h1 { font-size: 3rem; font-weight: 600; }
+h2 { font-size: 2.5rem; font-weight: 600; }
+h3 { font-size: 1.25rem; font-weight: 600;}
+a { color: #555555; text-decoration: none; border-bottom: 1px dashed gray; }
+a:hover, i:hover {font-weight: 600;}       
+h1, h2, h3, ul, li {margin: 0; padding: 0;}
+
+
+/*------------------------------------   Header   ------------------------------------*/
+header a {
+    border-bottom: none;
 }
-.images{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.selected {
+    font-weight: 600;
 }
-.images figure {
-  margin: 0;
-  width: 480px;
-  margin: 20px 0 30px;
+#navbar {
+    /* sticky nav-bar */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+    z-index: 99; 
+    background-color:rgba(252, 250, 250, 0.96);
+    border-bottom: 1px solid #e7e7e7;
 }
-img {
-  width: 100%;
-  height: auto;
+#navbar-container { 
+    display: flex;
+    align-items: baseline;   
+    font-size: 1rem;
+    padding: 1rem 0;
 }
-figcaption{
-  font-size: 14px;
-  font-style: italic;
-  color: #555555;
-  text-align: center;
+header a {
+    color: #383838;
 }
-ul {
-  margin: 0;
+#right-nav-container {
+    margin-left: auto;
 }
-li {
-  margin: 0 0 8px 0;
+#top-nav-name {
+    font-family: "Dancing Script", cursive;
+    font-size: 2rem;
+    margin-right: auto;
 }
-a {
-  color: #555555;
-  text-decoration: none;   /* remove underline */
+#top-nav-projects {
+    margin: 0 1.75em;
 }
-a:hover {
-  font-weight: 600;
+/* ------------------------------------   Footer   ------------------------------------*/
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4rem 0;
+}
+footer a {
+    border-bottom: none;
+}
+footer h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+footer nav {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+footer nav a {
+    margin: 1rem; 
+}
+#resumebutton {
+    padding: 5px 10px;
+    border: 3px solid #555555;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+#copyright {
+    font-size: 0.75rem;
+    color: #555555;
 }
 
-/*---  Headings ---*/
-.title_description {
-  font-size: 18px;
-  font-style: italic;
-}
-.section h2:before {
-  display: block;
-  content: "";
-  border-bottom: 2px solid #d3d3d3;
-  width: 60px;
-  margin-bottom: 20px;
-  padding-top: 15px;
-}
-.section h2 {
-  text-transform: uppercase;
-  margin: 40px 0 20px;
-  font-family: Raleway;
-  color: #555555;
-  font-size: 42px;
-}
+/*------------------------------------   Home   ------------------------------------*/
 
-/*---  End of Page ---*/
-.end_header {
-  margin: 100px 0 30px;
-  font-size: 24px;
-  font-weight: normal;
-  color: #161C1C;
-  border-top: 2px solid #161C1C;
-  padding-top: 20px;
-  text-align: center;
-  text-transform: uppercase;
-}
-.page_end {
-  display: flex;
-  justify-content: space-between;
-}
-.end_container {
-  position: relative;
-  width: 470px;
-  padding: 50px 0;
-  background-color: #383838;
-  text-align: center;
-}
-.end_link {
-  font-size: 32px; 
-  font-family: Raleway, 'Open Sans', sans-serif; 
-  color: #f5f5f5;
-}
-.back, .next{
-  position: absolute;
-  top: 0px;
-  font-size: 18px;
-  font-weight:lighter; 
-  color: #d3d3d3;
-  text-transform: uppercase;
-}
-.back {
-  left: 20px;
-}
-.next{
-  right: 20px;
-}
-
-/* ------------------------------------   Profile   ------------------------------------*/
-.profile{
-  display: grid;
-  grid-template-columns: 30% 70%; 
-  margin-bottom: 50px;
+/*--- Profile ---*/
+#profile {
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    width: 90%;
+    margin: 8rem auto 3rem;
 }
 #photo {
-  grid-column: 1/2;
-  grid-row: 1/4;
-  align-self: top;
-  justify-self: center;
-  margin-left: 30px;
-  width: 80%;
-  height: auto;
-  border: 5px solid #383838;
-  border-radius: 50%;
+    display: block;
+    grid-column: 1/2;
+    grid-row: 1/4;
+    width: 80%;
+    height: auto;
+    align-self: center;
+    border: 4px solid #161C1C;
+    border-radius: 50%;
 }
-#hi {
-  grid-column: 2/3;
-  margin: 0 0 0 30px;
-  font-size: 90px;
-  font-style: italic;
-  line-height: 1;
+#profile h1 {
+    font-size: 5rem;
+    font-style: italic;
+    font-weight: normal;
 }
 #description {
-  grid-column: 2/3;
-  margin: 30px 0 0 30px;
-  font-size: 18px;
-  color: #383838;
+    color: #383838;
+    margin: 0.5rem 0;
 }
-#opportunities {
-  grid-column: 2/3;
-  font-size: 16px;
-  color: #383838;
-  margin-left: 30px;
+#links {
+    font-size: 0.875rem;
 }
-.profile a, .title a {
-  border-bottom: 1px solid #555555;       /* underline */
+
+/*--- Projects ---*/
+#projects {
+    display: flex;
+    flex-direction: column;
 }
-/* ------------------------------------   Projects   ------------------------------------*/
-#projectheading {
-  font-size: 24px;
-  font-weight: normal;
-  color: #555555;
-  font-size: 24px;
-  text-align: left;
-  border: none;
-  position: relative;
-  padding-top: 50px;
+#projects h1 {
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+    color: #555555;
+    margin: 2rem 0 0;
 }
-#project1 {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  background-color: #55555510;
-  height:300px;
-  margin-bottom: 50px;
+#projects a {
+    border-bottom: none;
 }
-#project1 h2 {
-  grid-row: 1;
-  grid-column: 1/2;
-  margin: 0 100px;
-  align-self: flex-end;
-  font-size: 50px;
-  font-weight: 600;
-  color: #161C1C;
+#projects a:hover {
+    font-weight: normal;
 }
-#project1 p {
-  grid-row: 2;
-  grid-column: 1/2;
-  margin: 10px 100px;
-  align-self: flex-start;
-  /* font-size: 18px; */
-  font-size: 16px;
-  color: #383838;
+#featured {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-auto-rows: 30rem;
+    column-gap: 5rem;
+}
+.case-study {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0 0;
+    padding-bottom: 1rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px 0 rgba(129, 95, 95, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.case-study img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px 16px 0px 0px; 
+}
+.case-study-text {
+    width: 80%;
+    align-self: center;
+    margin-top: 1rem;
+}
+.case-study-tag {
+    font-size: 0.75rem;
+    font-weight: lighter;
+    color: #555555;
 }
 
 /* ------------------------------------   About   ------------------------------------*/
-.about h1 {
-  margin-bottom: 50px;
+
+/*--- Meet Jingxiu ---*/
+#meet-jingxiu {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    column-gap: 3rem;
+    margin-top: 6rem;
+}
+#ucl-photo {
+    width: 100%;
+    height: auto;
+    grid-column: 2/3;
+    grid-row: 1/4;
+    border-radius: 50%;
 }
 
-/* ------------------------------------   CV   ------------------------------------*/
-#resume_instead {
-  font-size: 16px;
-  margin-top: 30px;
+/*--- UX Journey ---*/
+#ux-journey h2 {
+    text-align: center;
 }
-.date_container {
-  display:flex;
-  /* justify-content: space-between; */
-  align-items:baseline;
-    /* background-color: #55555510; */
+.timeline {
+    margin: 3rem 0;
+}
+.timeline p {
+    font-size: 0.875rem;
+}
+.timeline h3 {
+    font-size: 1.125rem;
 }
 .date {
-  font-size: 16px;
-  font-style: italic;
-  margin-left: 15px;
-  font-weight: lighter;
+    font-weight: lighter;
+    font-style: italic;
+    color: #555555;
+    line-height: 1rem;
 }
-/*---  Skills ---*/
-#skills p, #skills h3 {
-  display: inline-block;
+/* Vertical ruler */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #555555;
+    top: 8%;
+    bottom: 7%;
+    left: 50%;
+    margin-left: 2px;
+    z-index: -1;
 }
-/*---  Work ---*/
-.area_of_work {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-row-gap: 10px;
-  grid-column-gap: 10px;
-  margin-bottom: 30px;
-}
-.area_of_work h3 {
-  font-size: 21px;
-  font-weight: lighter;
-  text-transform: uppercase;
-  grid-column: 1/2;
-  grid-row: 1/span 3;
-  align-items: baseline;
-}
-.area_of_work h3:before {
-  content: "";
-  margin-top: 50px;
-}
-.experience {
-  grid-column: 2/3; 
-}
-.experience h4 {
-  font-size: 18px;
-}
-/* ------------------------------------   Interests   ------------------------------------*/
-#music-grid {
-  display: grid;
-  grid-template-columns: 500px 500px;
-  grid-column-gap: 0;
-}
-#music-grid p {
-  grid-column: 1/2;
-  width: 450px;
-  margin: 0 0 16px;
-}
-#music-grid figure {
-  grid-column: 2/3;
-  grid-row: 1/span 4;
-  width: 480px;
-  justify-self: flex-end;
-  margin: auto 0 0;
+/* Container around content */
+.timeline-container {
+    padding: 1rem 2rem;
+    position: relative;
+    width: 45%;
+    background-color: #FCFAFA;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 2rem;
 }
 
-/* ------------------------------------   Header   ------------------------------------*/
-header {
-  display: flex;
-  align-items: baseline;      /* aligning to the base of vertical cross-axis */
-  margin: 30px 0 50px;
+/* The circles on the timeline */
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -62px;
+    background-color: white;
+    border: 4px solid #555555;
+    top: 1rem;
+    border-radius: 50%;
 }
-header a {
-  margin: 0 15px;
-  font-size: 18px;
+/* Place the container to the left */
+.timeline-left {
+    left: 0;
 }
-#name {
-  margin-left: 0;
-  margin-right: auto;     /* push the rest of the navigation to the right */
-  font-family: "Dancing Script", cursive;
-  font-size: 36px;
+/* Place the container to the right */
+.timeline-right {
+    left: 55%;
 }
-#about {
-  margin-right: 0;
+/* Fix the circle for containers on the right side */
+.timeline-right::after {
+    left: -13%;
 }
 
-/* ------------------------------------   Footer   ------------------------------------*/
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 60px 0;
+#view-linkedin {
+    text-align: center;
 }
-footer h1 {
-  font-size: 28px;
-  font-weight: bold;
-  margin: 0;
-  color: #161C1C;
+#opportunities {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.875rem;
 }
-footer nav a {
-  margin: 15px 15px;
-  font-size:32px;
+
+/*--- My Interests ---*/
+#my-interests {
+    padding-bottom: 0;
 }
-#resumebutton {
-  padding: 5px 25px;
-  border: 3px solid #161C1C;
-  border-radius: 10px;
-  font-size: 16px;
+#interests-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    column-gap: 3rem;
 }
-#copyright {
-  margin: 30px;
-  font-size: 12px;
-  color: #555555c5;
+.interest-card {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.interest-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px 16px 0px 0px;
+}
+.interest-card h3 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 1rem 2rem;
+}
+.interest-card i {
+    align-self: center;
+    color:grey;
+    margin-top: auto;
+    margin-bottom: 1rem;
+}
+.interest-card p {
+    text-align: start;
+    font-size: 0.875rem;
+    margin: 0 2rem 1rem;
+}
+
+/* ------------------------------------   Animations ------------------------------------*/
+
+/* Hamburger Menu */
+.hamburger {
+    padding: 15px 15px;
+    display: none;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    opacity: 0.7;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible; }
+.hamburger:hover {
+        opacity: 1; }
+.hamburger.is-active:hover {
+        opacity: 1; }
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+        background-color: #000; }
+.hamburger-box {
+    width: 15px;
+    height: 18px;
+    display: inline-block;
+    position: relative;}
+.hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px; }
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 30px;
+    height: 2px;
+    background-color: #000;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease; }
+.hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; }
+.hamburger-inner::before {
+    top: -10px; }
+.hamburger-inner::after {
+    bottom: -10px; }
+
+/* Hamburger Slider Animation*/
+.hamburger--slider .hamburger-inner {
+    top: 2px; }
+    .hamburger--slider .hamburger-inner::before {
+    top: 10px;
+    transition-property: transform, opacity;
+    transition-timing-function: ease;
+    transition-duration: 0.2s; }
+    .hamburger--slider .hamburger-inner::after {
+    top: 20px; }
+.hamburger--slider.is-active .hamburger-inner {
+    transform: translate3d(0, 10px, 0) rotate(45deg); }
+    .hamburger--slider.is-active .hamburger-inner::before {
+    transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+    opacity: 0; }
+    .hamburger--slider.is-active .hamburger-inner::after {
+    transform: translate3d(0, -20px, 0) rotate(-90deg); }
+
+/* Underline links */
+a.left-hover {
+    position: relative;
+}
+a.left-hover:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -1px;
+    left: 0;
+    background-color: #555555;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+a.left-hover:hover:before {
+    visibility: visible;
+    width: 100%;
+}
+
+/* Expandable/Collapsable Card */
+.card-text {
+    display: none;
+}
+.collapsed {
+    height: 22rem;
+}
+.expanded {
+    height: 41rem;
+}
+.expanded > i {
+    transform: rotate(180deg);
+}
+
+/* Card lifts on hover */
+.card:hover {
+    box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px;
+    transform: translate3d(0px, -0.75rem, 0px);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+/* Bouncing Arrow */
+.collapsed:hover > i {
+    -webkit-animation: bounce 1.5s;
+    animation: bounce 1.5s;
+    animation-delay: 0.3s;
+}
+@-webkit-keyframes bounce {
+	0%,
+	25%,
+	50%,
+	75%,
+	100% {
+		-webkit-transform: translateY(0);
+		        transform: translateY(0);
+	}
+	40% {
+		-webkit-transform: translateY(-15px);
+		        transform: translateY(-15px);
+	}
+	60% {
+		-webkit-transform: translateY(-10px);
+		        transform: translateY(-10px);
+    }
+}
+@keyframes bounce {
+	0%,
+	25%,
+	50%,
+	75%,
+	100% {
+		-webkit-transform: translateY(0);
+		        transform: translateY(0);
+	}
+	40% {
+		-webkit-transform: translateY(-15px);
+		        transform: translateY(-15px);
+	}
+	60% {
+		-webkit-transform: translateY(-10px);
+		        transform: translateY(-10px);
+	}
+}
+
+
+
+/* ------------------------------------   Responsive (default - 900px)   ------------------------------------*/
+
+/*-------------------- For Tablets - 700px -------------------- */
+@media screen and (max-width:990px) {
+    .page {
+        max-width: 700px;
+    }
+    html {
+        font-size: 14px;
+    }
+    /* ----- Home ----- */
+    #profile h1 {
+        font-size: 4.5rem;
+    }
+    #description {
+        font-size: 0.9375rem;
+    }
+    /* ----- About ----- */
+    /* UX Journey - Vertical ruler */
+    .timeline::after {
+        top: 7%;
+        bottom: 6%;
+    }
+    /* UX Journey - The circles on the timeline */
+    .timeline-container::after {
+        right: -52px;
+    }
+    /* UX Journey - Fix the circle for containers on the right side */
+    .timeline-right::after {
+        right: -52px;
+    }
+    /* My Interests - Expandable/Collapsable Card */
+    .expanded {
+        height: 43rem;
+    }
+    .collapsed {
+        height: 20rem;
+    }
+}
+
+/*-------------------- For Small Windows - 500px -------------------- */
+
+@media screen and (max-width:750px) {
+    .page {
+        max-width: 500px;
+    }
+    html {
+        font-size: 13px;
+    }
+    /* ----- Home ----- */
+    /* Profile */
+    #profile {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    #description {
+        font-size: 1rem;
+    }
+    #photo {
+        width: 50%;
+    }
+    #profile h1 {
+        font-size: 3.5rem;
+        margin: 2rem 0 0;
+    }
+    #description {
+        font-size: 1rem;
+    }
+    #links {
+        font-size: 1rem;
+    }
+    /* Projects */
+    .case-study-text h2 {
+        font-size: 2rem;
+    }
+    /* ----- About ----- */
+    /* Meet Jingxiu */
+    #meet-jingxiu {
+        display: flex;
+        flex-direction: column;
+    }
+    #ucl-photo {
+        width: 50%;
+        order: -1;
+        margin: 0 auto 2rem;
+    }
+    #about-me-text {
+        text-align: center;
+    }
+    /* UX Journey */
+
+    /* Vertical ruler */
+    .timeline::after {
+        top: 8%;
+        bottom: 9%;
+        left: 90%;
+    }
+    /* Container around content */
+    .timeline-container {
+        width: 80%;
+    }
+
+    /* The circles on the timeline */
+    .timeline-container::after {
+        right: -66px;
+    }
+    /* Place the container to the right -> place to left instead */
+    .timeline-right {
+        left: 0;
+        /* right: -62px; */
+    }
+    /* Fix the circle for containers on the right side */
+    .timeline-right::after {
+        left: 110.4%;
+    }
+
+    /* My Interests */
+    #my-interests {
+        padding-bottom: 0;
+    }
+    #interests-grid {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+    }
+    .interest-card {
+        width: 60%;
+        margin: 2rem auto;
+    }
+    /* Animation - Expandable/Collapsable Card */
+    .card-text {
+        display: none;
+    }
+    .expanded {
+        height: 40rem;
+    }
+    .collapsed {
+        height: 26rem;
+    }
+}
+
+/*-------------------- For Mobile - 300px -------------------- */
+
+@media screen and (max-width:550px) {
+    .page {
+        max-width: 300px;
+    }
+    html {
+        font-size: 12px;
+    }
+    /* ----- Home ----- */
+    /* Profile */
+    #photo {
+        width: 80%;
+    }
+    /* Projects */
+    #featured {
+        display: flex;
+        flex-direction: column;
+    }
+    /* ----- About ----- */
+    #ucl-photo {
+        width: 80%;
+    }
+    /* UX Journey */
+    /* Vertical ruler */
+    .timeline::after {
+        top: 7%;
+        bottom: 7%;
+    }
+    /* The circles on the timeline */
+    .timeline-container::after {
+        right: -47px;
+    }
+    /* Fix the circle for containers on the right side */
+    .timeline-right::after {
+        left: 109%;
+    }
+    /* My Interests */
+    .interest-card {
+        width: 80%;
+    }
+    .expanded {
+        height: 39rem;
+    }
+    .collapsed {
+        height: 24rem;
+    }
+    /* ----- Hamburger Menu - Header Nav ----- */
+    #navbar-container { 
+        flex-direction: column;
+    }
+    #left-nav-container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: baseline;
+    }
+    /* Show Hamburger Menu */
+    .hamburger {     
+        display: block;
+        margin-left: auto;
+    }
+    /* Show Right Navigation below instead of at the right */
+    #right-nav-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    #right-nav-container a {
+        margin: 2rem 0 1rem auto;
+        font-size: 1.125rem;
+    }
+    .hide {
+        display: none;
+    }
+}
+
