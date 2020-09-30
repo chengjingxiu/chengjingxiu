@@ -611,9 +611,6 @@ a.left-hover:hover:before {
         margin: 2rem auto;
     }
     /* Animation - Expandable/Collapsable Card */
-    .card-text {
-        display: none;
-    }
     .expanded {
         height: 40rem;
     }
@@ -664,7 +661,7 @@ a.left-hover:hover:before {
         width: 80%;
     }
     .expanded {
-        height: 39rem;
+        height: 40rem;
     }
     .collapsed {
         height: 24rem;
