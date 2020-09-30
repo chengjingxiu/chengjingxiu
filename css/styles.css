@@ -235,8 +235,8 @@ footer nav a {
     position: absolute;
     width: 4px;
     background-color: #555555;
-    top: 8%;
-    bottom: 7%;
+    top: 6%;
+    bottom: 5%;
     left: 50%;
     margin-left: 2px;
     z-index: -1;
@@ -500,8 +500,8 @@ a.left-hover:hover:before {
     /* ----- About ----- */
     /* UX Journey - Vertical ruler */
     .timeline::after {
-        top: 7%;
-        bottom: 6%;
+        top: 6%;
+        bottom: 5%;
     }
     /* UX Journey - The circles on the timeline */
     .timeline-container::after {
@@ -575,7 +575,7 @@ a.left-hover:hover:before {
     /* Vertical ruler */
     .timeline::after {
         top: 8%;
-        bottom: 9%;
+        bottom: 8%;
         left: 90%;
     }
     /* Container around content */
@@ -645,7 +645,7 @@ a.left-hover:hover:before {
     /* UX Journey */
     /* Vertical ruler */
     .timeline::after {
-        top: 7%;
+        top: 6%;
         bottom: 7%;
     }
     /* The circles on the timeline */
