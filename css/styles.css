@@ -1,5 +1,5 @@
 /*---------------------------------   Import Fonts   ---------------------------------*/
-/* Open Sans*/
+/* Open Sans */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
 /* Dancing Script */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
@@ -11,6 +11,7 @@ html {
     box-sizing: border-box;
     background-color: #FCFAFA;
     font-size: 16px;
+    scroll-behavior: smooth;
   }
   *, *:before, *:after {
     box-sizing: inherit;
@@ -36,12 +37,13 @@ body {
     padding: 4rem 0;
     background-color: #d3d3d444;
 }
-h1 { font-size: 3rem; font-weight: 600; }
-h2 { font-size: 2.5rem; font-weight: 600; }
-h3 { font-size: 1.25rem; font-weight: 600;}
+h1 { font-size: 3rem; font-weight: 600; margin: 0; padding: 0;}
+h2 { font-size: 2.125rem; font-weight: 600; margin: 0; padding:0;}
+h3 { font-size: 1.25rem; font-weight: 600; margin: 2rem 0 0; padding: 0;}
+ul, li {margin: 0; padding: 0;}
 a { color: #555555; text-decoration: none; border-bottom: 1px dashed gray; }
 a:hover, i:hover {font-weight: 600;}       
-h1, h2, h3, ul, li {margin: 0; padding: 0;}
+strong {font-weight: 700;}
 
 
 /*------------------------------------   Header   ------------------------------------*/
@@ -52,7 +54,6 @@ header a {
     font-weight: 600;
 }
 #navbar {
-    /* sticky nav-bar */
     position: fixed;
     top: 0;
     width: 100%;
@@ -65,7 +66,7 @@ header a {
     display: flex;
     align-items: baseline;   
     font-size: 1rem;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
 }
 header a {
     color: #383838;
@@ -141,9 +142,6 @@ footer nav a {
     color: #383838;
     margin: 0.5rem 0;
 }
-#links {
-    font-size: 0.875rem;
-}
 
 /*--- Projects ---*/
 #projects {
@@ -170,9 +168,10 @@ footer nav a {
     column-gap: 5rem;
 }
 .case-study {
+    height: 25.5rem;
     display: flex;
     flex-direction: column;
-    margin: 2rem 0 0;
+    margin: 2rem 0;
     padding-bottom: 1rem;
     border-radius: 16px;
     box-shadow: 0 4px 8px 0 rgba(129, 95, 95, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -180,17 +179,39 @@ footer nav a {
 .case-study img {
     width: 100%;
     height: auto;
+    margin-bottom: 0.5rem;
     border-radius: 16px 16px 0px 0px; 
 }
+.case-study-title {
+    display: flex;
+    justify-content: space-between;
+}
 .case-study-text {
-    width: 80%;
+    width: 85%;
     align-self: center;
     margin-top: 1rem;
+}
+.case-study-text h2 {
+    display: inline;
+    font-size: 1.5rem;
+    line-height: 1rem;
+    margin-right: auto;
+}
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .case-study-tag {
     font-size: 0.75rem;
     font-weight: lighter;
-    color: #555555;
+    color: #000;
+    margin: 0.5rem 0 0;
+    border-radius: 7px;
+    background-color: #e7e7e770;
+    padding: 0.25rem 0.25rem;
+    flex-basis: 47%;
+    text-align: center;
 }
 
 /* ------------------------------------   About   ------------------------------------*/
@@ -222,6 +243,7 @@ footer nav a {
 }
 .timeline h3 {
     font-size: 1.125rem;
+    margin: 0;
 }
 .date {
     font-weight: lighter;
@@ -235,15 +257,15 @@ footer nav a {
     position: absolute;
     width: 4px;
     background-color: #555555;
-    top: 6%;
-    bottom: 5%;
+    top: 7%;
+    bottom: 6%;
     left: 50%;
     margin-left: 2px;
     z-index: -1;
 }
 /* Container around content */
 .timeline-container {
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
     position: relative;
     width: 45%;
     background-color: #FCFAFA;
@@ -293,7 +315,7 @@ footer nav a {
 #interests-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
-    column-gap: 3rem;
+    column-gap: 1.5rem;
 }
 .interest-card {
     display: flex;
@@ -321,7 +343,151 @@ footer nav a {
 .interest-card p {
     text-align: start;
     font-size: 0.875rem;
-    margin: 0 2rem 1rem;
+    margin: 0 1rem 1rem;
+}
+
+
+/*------------------------------------   Case Studies   ------------------------------------*/
+.case-study-page {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+figure {
+    width: 100%;
+    margin: 1rem auto 4rem;
+}
+.image-double {
+    background-color: inherit;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    column-gap: 3rem;
+    padding: 1rem 3rem;
+    position: relative;
+    z-index: 2;
+}
+.image-single figure {
+    max-width: 800px;
+}
+.image-double figure {
+    width: 100%;
+    margin: 2rem auto;
+}
+figcaption {
+    font-size: 0.875rem;
+    color: #555555;
+}
+.notes {
+    font-size: 0.875rem;
+    color: #555555;
+    font-style: italic;
+}
+
+/* Quotes */
+.quote-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    column-gap: 4rem;
+    color: #555555;
+    font-weight: 300;
+    font-size: 0.925rem;
+    margin-bottom: 2rem;
+}
+.person {
+    font-style: italic;
+}
+
+/* --- Hero Image --- */
+.hero {
+    margin-top: 4rem;
+    height: 400px;
+    color: #000;
+    background-image: url("../images/evg/evg-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.title {
+    padding-top: 120px;
+}
+.title h1, .title p {
+    width: 60%;
+}
+/* --- Summary --- */
+.summary-background {
+    background-color: #d3d3d444;
+}
+.summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    column-gap: 4rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+/* Line break */
+/* .first-section:before {    
+    display: block;
+    content: "";
+    border-bottom: 1.5px solid #d3d3d3;
+    width: 100%;
+    margin: -4rem auto 4rem;
+  } */
+.summary h2 {
+    font-size: 2rem;
+}
+.summary h3 {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+.detail {
+    margin: 0;
+}
+.skills-list {
+    margin-top: 1rem;
+}
+.summary ul {
+    list-style-type: none;
+}
+.summary li {
+    margin: 0.5rem 0;
+}
+
+/* --- Side Navigation --- */
+.sidenav {
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    overflow-x: hidden; /* Disable horizontal scroll */
+    width: 200px;
+    top: 6rem; 
+    left: 1rem;
+    font-size: 0.875rem;
+}
+.sidenav a {
+    display: block;
+    padding: 8px 10px;
+    font-weight: 300;
+    border-bottom: none;
+    border-left: 2px solid transparent;
+    color: #555555;
+}
+.sidenav a:hover {
+    font-weight: 600;
+}
+.sidenav .active {
+    font-weight: 600;
+    border-left: 2px solid #555555;
+} 
+/* ----- Everyday Vegan Grocer --- */
+.evg-colour {
+    background-color: rgb(230, 255, 240);
+}
+#affinitymap {
+    margin-bottom: 2rem;
+}
+.prototype-preference {
+    margin-left: 2rem;
 }
 
 /* ------------------------------------   Animations ------------------------------------*/
@@ -422,7 +588,7 @@ a.left-hover:hover:before {
     height: 22rem;
 }
 .expanded {
-    height: 41rem;
+    height: 37rem;
 }
 .expanded > i {
     transform: rotate(180deg);
@@ -480,6 +646,11 @@ a.left-hover:hover:before {
 
 
 
+
+
+
+
+
 /* ------------------------------------   Responsive (default - 900px)   ------------------------------------*/
 
 /*-------------------- For Tablets - 700px -------------------- */
@@ -488,35 +659,47 @@ a.left-hover:hover:before {
         max-width: 700px;
     }
     html {
-        font-size: 14px;
+        font-size: 16px;
     }
     /* ----- Home ----- */
+    #profile {
+        width: 100%;
+    }
     #profile h1 {
         font-size: 4.5rem;
     }
-    #description {
+    #photo {
+        width: 90%;
+    }
+    #description, #profile {
         font-size: 0.9375rem;
+    }
+    .case-study {
+        height: 23rem;
+    }
+    .case-study-text h2 {
+        font-size: 1.25rem;
     }
     /* ----- About ----- */
     /* UX Journey - Vertical ruler */
     .timeline::after {
         top: 6%;
-        bottom: 5%;
+        bottom: 6.5%;
     }
     /* UX Journey - The circles on the timeline */
     .timeline-container::after {
         right: -52px;
     }
-    /* UX Journey - Fix the circle for containers on the right side */
+    /* Fix the circle for containers on the right side */
     .timeline-right::after {
-        right: -52px;
-    }
+        left: -13.5%;
+    }   
     /* My Interests - Expandable/Collapsable Card */
     .expanded {
-        height: 43rem;
+        height: 38rem;
     }
     .collapsed {
-        height: 20rem;
+        height: 18rem;
     }
 }
 
@@ -527,7 +710,7 @@ a.left-hover:hover:before {
         max-width: 500px;
     }
     html {
-        font-size: 13px;
+        font-size: 16px;
     }
     /* ----- Home ----- */
     /* Profile */
@@ -536,25 +719,32 @@ a.left-hover:hover:before {
         flex-direction: column;
         text-align: center;
     }
-    #description {
+    #description, #profile {
         font-size: 1rem;
     }
     #photo {
         width: 50%;
     }
     #profile h1 {
-        font-size: 3.5rem;
+        font-size: 4.5rem;
         margin: 2rem 0 0;
-    }
-    #description {
-        font-size: 1rem;
     }
     #links {
         font-size: 1rem;
     }
     /* Projects */
+    #featured {
+        display: flex;
+        flex-direction: column;
+    }
+    .case-study {
+        height: 29rem;
+    }
     .case-study-text h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
+    }
+    #featured {
+        margin-bottom: 0rem;
     }
     /* ----- About ----- */
     /* Meet Jingxiu */
@@ -574,18 +764,18 @@ a.left-hover:hover:before {
 
     /* Vertical ruler */
     .timeline::after {
-        top: 8%;
+        top: 7%;
         bottom: 8%;
         left: 90%;
     }
     /* Container around content */
     .timeline-container {
-        width: 80%;
+        width: 85%;
     }
 
     /* The circles on the timeline */
     .timeline-container::after {
-        right: -66px;
+        right: -42px;
     }
     /* Place the container to the right -> place to left instead */
     .timeline-right {
@@ -594,7 +784,7 @@ a.left-hover:hover:before {
     }
     /* Fix the circle for containers on the right side */
     .timeline-right::after {
-        left: 110.4%;
+        left: 104%;
     }
 
     /* My Interests */
@@ -612,10 +802,10 @@ a.left-hover:hover:before {
     }
     /* Animation - Expandable/Collapsable Card */
     .expanded {
-        height: 40rem;
+        height: 37rem;
     }
     .collapsed {
-        height: 26rem;
+        height: 22rem;
     }
 }
 
@@ -626,17 +816,21 @@ a.left-hover:hover:before {
         max-width: 300px;
     }
     html {
-        font-size: 12px;
+        font-size: 16px;
     }
     /* ----- Home ----- */
     /* Profile */
     #photo {
         width: 80%;
     }
-    /* Projects */
-    #featured {
-        display: flex;
-        flex-direction: column;
+    #profile h1 {
+        font-size: 3rem;
+    }
+    .case-study {
+        height: 22.5rem;
+    }
+    .case-study-text h2 {
+        font-size: 1.25rem;
     }
     /* ----- About ----- */
     #ucl-photo {
@@ -645,26 +839,29 @@ a.left-hover:hover:before {
     /* UX Journey */
     /* Vertical ruler */
     .timeline::after {
-        top: 6%;
+        top: 5%;
         bottom: 7%;
+    }
+    .timeline-container {
+        padding: 1rem 1.2rem;
     }
     /* The circles on the timeline */
     .timeline-container::after {
-        right: -47px;
+        right: -32px;
     }
     /* Fix the circle for containers on the right side */
     .timeline-right::after {
-        left: 109%;
+        left: 103%;
     }
     /* My Interests */
     .interest-card {
         width: 80%;
     }
     .expanded {
-        height: 42rem;
+        height: 37rem;
     }
     .collapsed {
-        height: 24rem;
+        height: 19rem;
     }
     /* ----- Hamburger Menu - Header Nav ----- */
     #navbar-container { 
