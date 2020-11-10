@@ -35,7 +35,7 @@ body {
 }
 .wrapper-even {
     padding: 4rem 0;
-    background-color: #d3d3d444;
+    background-color: #f0f0f0;
 }
 h1 { font-size: 3rem; font-weight: 600; margin: 0; padding: 0;}
 h2 { font-size: 2.125rem; font-weight: 600; margin: 0; padding:0;}
@@ -366,13 +366,20 @@ figure {
     position: relative;
     z-index: 2;
 }
-.image-single figure {
-    max-width: 800px;
-}
 .image-double figure {
     width: 100%;
     margin: 2rem auto;
 }
+.image-single {
+    background-color: inherit;
+    padding: 1rem 3rem 0;
+    position: relative;
+    z-index: 2;
+}
+.image-single figure {
+    width: 90%;
+}
+
 figcaption {
     font-size: 0.875rem;
     color: #555555;
@@ -384,14 +391,19 @@ figcaption {
 }
 
 /* Quotes */
-.quote-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    column-gap: 4rem;
+.quote-single, .quote-double {
     color: #555555;
     font-weight: 300;
     font-size: 0.925rem;
-    margin-bottom: 2rem;
+    margin: 1rem auto 2rem;
+}
+.quote-single {
+    width: 60%;
+}
+.quote-double {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    column-gap: 4rem;
 }
 .person {
     font-style: italic;
@@ -402,7 +414,6 @@ figcaption {
     margin-top: 4rem;
     height: 400px;
     color: #000;
-    background-image: url("../images/evg/evg-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -480,6 +491,9 @@ figcaption {
     border-left: 2px solid #555555;
 } 
 /* ----- Everyday Vegan Grocer --- */
+#evg-hero {
+    background-image: url("../images/evg/evg-hero.jpg");
+}
 .evg-colour {
     background-color: rgb(230, 255, 240);
 }
@@ -488,6 +502,17 @@ figcaption {
 }
 .prototype-preference {
     margin-left: 2rem;
+}
+
+/* ----- CuriousCore --- */
+#curiouscore-hero {
+    background-image: url("../images/curiouscore/curiouscore-hero.jpg");
+}
+.curiouscore-colour {
+    background-color:rgb(225, 240, 255)
+}
+#curiouscore-surveys {
+    padding: 0;
 }
 
 /* ------------------------------------   Animations ------------------------------------*/
