@@ -857,9 +857,6 @@ a.left-hover:hover:before {
     .small-title p {
         margin-bottom: 0;
     }
-    .hero {
-        height: 300px;
-    }
     #evg-hero {
         background-image: url("../images/evg/evg-thumbnail.jpg");
     }
@@ -969,6 +966,9 @@ a.left-hover:hover:before {
     /* ---- Case Study Page ---- */
     .case-study-page {
         max-width: 300px;
+    }
+    .hero {
+        height: 300px;
     }
     h2 {
         font-size: 1.75rem;
