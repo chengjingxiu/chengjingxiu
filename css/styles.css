@@ -870,9 +870,11 @@ a.left-hover:hover:before {
     .summary > div {
         margin: 1rem 0;
     }
-
     .case-study-page {
         max-width: 500px;
+    }
+    h2 {
+        font-size: 1.75rem;
     }
     .image-double {
         display: flex;
@@ -971,8 +973,11 @@ a.left-hover:hover:before {
         height: 300px;
     }
     h2 {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     } 
+    h3 {
+        font-size: 1.125rem;
+    }
     .quote-single {
         width: 80%;
     }
