@@ -707,7 +707,7 @@ a.left-hover:hover:before {
     /* ----- About ----- */
     /* UX Journey - Vertical ruler */
     .timeline::after {
-        top: 6%;
+        top: 5%;
         bottom: 6.5%;
     }
     /* UX Journey - The circles on the timeline */
@@ -798,7 +798,7 @@ a.left-hover:hover:before {
 
     /* Vertical ruler */
     .timeline::after {
-        top: 7%;
+        top: 6%;
         bottom: 8%;
         left: 90%;
     }
@@ -913,7 +913,7 @@ a.left-hover:hover:before {
     /* UX Journey */
     /* Vertical ruler */
     .timeline::after {
-        top: 5%;
+        top: 4%;
         bottom: 7%;
     }
     .timeline-container {
