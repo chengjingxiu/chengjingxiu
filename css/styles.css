@@ -37,7 +37,7 @@ body {
     padding: 4rem 0;
     background-color: #f0f0f0;
 }
-h1 { font-size: 3rem; font-weight: 600; margin: 0; padding: 0;}
+h1 { font-size: 3.5rem; font-weight: 600; margin: 0; padding: 0;}
 h2 { font-size: 2.125rem; font-weight: 600; margin: 0; padding:0;}
 h3 { font-size: 1.25rem; font-weight: 600; margin: 2rem 0 0; padding: 0;}
 ul, li {margin: 0; padding: 0;}
@@ -261,7 +261,7 @@ footer nav a {
     bottom: 6%;
     left: 50%;
     margin-left: 2px;
-    z-index: -1;
+    z-index: 0;
 }
 /* Container around content */
 .timeline-container {
@@ -278,6 +278,7 @@ footer nav a {
 .timeline-container::after {
     content: '';
     position: absolute;
+    z-index: 2;
     width: 25px;
     height: 25px;
     right: -62px;
@@ -419,10 +420,13 @@ figcaption {
     background-position: center;
 }
 .title {
-    padding-top: 120px;
+    padding-top: 7rem;
+}
+.small-title {
+    display: none;
 }
 .title h1, .title p {
-    width: 60%;
+    width: 45%;
 }
 /* --- Summary --- */
 .summary-background {
@@ -436,14 +440,6 @@ figcaption {
     margin: 0 auto;
     padding: 3rem 0;
 }
-/* Line break */
-/* .first-section:before {    
-    display: block;
-    content: "";
-    border-bottom: 1.5px solid #d3d3d3;
-    width: 100%;
-    margin: -4rem auto 4rem;
-  } */
 .summary h2 {
     font-size: 2rem;
 }
@@ -493,6 +489,9 @@ figcaption {
 /* ----- Everyday Vegan Grocer --- */
 #evg-hero {
     background-image: url("../images/evg/evg-hero.jpg");
+}
+.evg-title {
+    padding-top: 4rem;
 }
 .evg-colour {
     background-color: rgb(230, 255, 240);
@@ -726,6 +725,16 @@ a.left-hover:hover:before {
     .collapsed {
         height: 18rem;
     }
+    /* ---- Case Studies --- */
+    .summary h2 {
+        font-size: 1.5rem;
+    }
+    .sidenav {
+        visibility: hidden;
+    }
+    h1 {
+        font-size: 3rem;
+    }
 }
 
 /*-------------------- For Small Windows - 500px -------------------- */
@@ -832,7 +841,45 @@ a.left-hover:hover:before {
     .collapsed {
         height: 22rem;
     }
-}
+
+    /* ---- Case Studies --- */
+    .title h1, .title p {
+        display: none;
+    }
+    .small-title {
+        display: block;
+        background-color: #d3d3d344;
+        padding-top: 2rem;
+    }
+    .small-title h1 {
+        font-size: 2.5rem;
+    }
+    .small-title p {
+        margin-bottom: 0;
+    }
+    #evg-hero {
+        background-image: url("../images/evg/evg-thumbnail.jpg");
+    }
+    #curiouscore-hero {
+        background-image: url("../images/curiouscore/curiouscore-thumbnail.jpg");
+    }
+    .summary {
+        display: flex;
+        flex-direction: column;
+    }
+    .summary > div {
+        margin: 1rem 0;
+    }
+
+    .case-study-page {
+        max-width: 500px;
+    }
+    .image-double {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 3rem;
+    }
+}   
 
 /*-------------------- For Mobile - 300px -------------------- */
 
@@ -916,5 +963,12 @@ a.left-hover:hover:before {
     .hide {
         display: none;
     }
+    /* ---- Case Study Page ---- */
+    .case-study-page {
+        max-width: 300px;
+    }
+    h2 {
+        font-size: 1.75rem;
+    } */
 }
 
