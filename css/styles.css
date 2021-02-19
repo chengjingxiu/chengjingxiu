@@ -30,11 +30,11 @@ body {
     position: relative;
 }
 .wrapper {
-    padding: 3rem 0;
+    padding: 4rem 0 2rem;
     background-color: #FFFFFF;
 }
 .wrapper-about {
-    padding: 3rem 0;
+    padding: 4rem 0 2rem;
     background-color: #FCFAFA;
 }
 /* .wrapper-odd {
