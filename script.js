@@ -47,8 +47,8 @@ window.onscroll = function() {
 }
 
 // Side Navbar //
-var topofDiv = $(".summary-background").offset().top; //gets offset of header
-var height = $(".summary-background").outerHeight(); //gets height of header
+var topofDiv = $(".activate-side-nav").offset().top; //gets offset of header
+var height = $(".activate-side-nav").outerHeight(); //gets height of header
 
 $(window).scroll(function(){
     var windscroll = $(window).scrollTop();

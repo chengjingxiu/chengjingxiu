@@ -29,18 +29,26 @@ body {
     margin: 0 auto;
     position: relative;
 }
-.wrapper-odd {
-    padding: 4rem 0;
+.wrapper {
+    padding: 3rem 0;
+    background-color: #FFFFFF;
+}
+.wrapper-about {
+    padding: 3rem 0;
     background-color: #FCFAFA;
 }
-.wrapper-even {
+/* .wrapper-odd {
+    padding: 4rem 0;
+    background-color: #FCFAFA;
+} */
+/* .wrapper-even {
     padding: 4rem 0;
     background-color: #f0f0f0;
-}
+} */
 h1 { font-size: 3.5rem; font-weight: 600; margin: 0; padding: 0;}
 h2 { font-size: 2.5rem; font-weight: 600; margin: 0; padding:0;}
 h3 { font-size: 1.25rem; font-weight: 600; margin: 2rem 0 0; padding: 0;}
-ul, li {margin: 0; padding: 0;}
+ul, ol, li {margin: 0; padding: 0;}
 a { color: #555555; text-decoration: none; border-bottom: 1px dashed gray; }
 a:hover, i:hover {font-weight: 600;}       
 strong {font-weight: 700;}
@@ -87,7 +95,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 4rem 0;
+    padding: 4rem 0;
 }
 footer a {
     border-bottom: none;
@@ -112,6 +120,9 @@ footer nav a {
 #copyright {
     font-size: 0.75rem;
     color: #555555;
+}
+.footer-project {
+    background-color: #FFFFFF;
 }
 
 /*------------------------------------   Home   ------------------------------------*/
@@ -168,7 +179,7 @@ footer nav a {
     column-gap: 5rem;
 }
 .case-study {
-    height: 25.5rem;
+    height: 27rem;
     display: flex;
     flex-direction: column;
     margin: 2rem 0;
@@ -354,12 +365,17 @@ footer nav a {
     margin: 0 auto;
     position: relative;
 }
+.case-study-page li {
+    margin: 0.5rem 0 0 2rem;
+}
 figure {
     width: 100%;
-    margin: 1rem auto 4rem;
+    margin: 1rem auto 2rem;
 }
 .image-double {
     background-color: inherit;
+    width: 70%;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr; 
     column-gap: 3rem;
@@ -375,10 +391,10 @@ figure {
     background-color: inherit;
     padding: 1rem 3rem 0;
     position: relative;
-    z-index: 2;
+    /* z-index: 2; */
 }
 .image-single figure {
-    width: 90%;
+    width: 70%;
 }
 
 figcaption {
@@ -413,7 +429,7 @@ figcaption {
 /* --- Hero Image --- */
 .hero {
     margin-top: 4rem;
-    height: 400px;
+    height: 420px;
     color: #000;
     background-repeat: no-repeat;
     background-size: cover;
@@ -429,9 +445,6 @@ figcaption {
     width: 45%;
 }
 /* --- Summary --- */
-.summary-background {
-    background-color: #d3d3d444;
-}
 .summary {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
@@ -440,18 +453,8 @@ figcaption {
     margin: 0 auto;
     padding: 3rem 0;
 }
-.summary h2 {
-    font-size: 2rem;
-}
-.summary h3 {
-    font-size: 1rem;
-    margin-top: 1rem;
-}
-.detail {
-    margin: 0;
-}
-.skills-list {
-    margin-top: 1rem;
+.summary p {
+    margin: 0.5rem 0;
 }
 .summary ul {
     list-style-type: none;
@@ -488,13 +491,13 @@ figcaption {
 } 
 /* ----- Everyday Vegan Grocer --- */
 #evg-hero {
-    background-image: url("../images/evg/evg-hero.jpg");
+    background-image: url("../evg/evg-hero.jpg");
 }
 .evg-title {
     padding-top: 4rem;
 }
 .evg-colour {
-    background-color: rgb(230, 255, 240);
+    background-color: #C3F4D730;
 }
 #affinitymap {
     margin-bottom: 2rem;
@@ -505,15 +508,25 @@ figcaption {
 
 /* ------ CuriousCore ---- */
 #curiouscore-hero {
-    background-image: url("../images/curiouscore/curiouscore-hero.jpg");
+    background-image: url("../curiouscore/curiouscore-hero.jpg");
 }
 .curiouscore-colour {
-    background-color:rgb(225, 240, 255)
+    background-color: #C8E6FF30;
 }
 #curiouscore-surveys {
     padding: 0;
 }
 
+/* ------ ZooniVRse ---- */
+#zoo-hero {
+    background-image: url("../zoonivrse/zoo-hero.jpg");
+}
+.zoonivrse-colour {
+    background-color: #C5CEED30;
+}
+#zoo-physical-mockup {
+    margin-bottom: 1rem;
+}
 /* ------------------------------------   Animations ------------------------------------*/
 
 /* Hamburger Menu */
@@ -699,7 +712,7 @@ a.left-hover:hover:before {
         font-size: 0.9375rem;
     }
     .case-study {
-        height: 23rem;
+        height: 24rem;
     }
     .case-study-text h2 {
         font-size: 1.25rem;
@@ -734,6 +747,12 @@ a.left-hover:hover:before {
     }
     h1 {
         font-size: 3rem;
+    }
+    .image-double {
+        width: 85%;
+    }
+    .image-single figure {
+        width: 85%;
     }
 }
 
@@ -772,7 +791,7 @@ a.left-hover:hover:before {
         flex-direction: column;
     }
     .case-study {
-        height: 29rem;
+        height: 30rem;
     }
     .case-study-text h2 {
         font-size: 1.5rem;
@@ -858,10 +877,13 @@ a.left-hover:hover:before {
         margin-bottom: 0;
     }
     #evg-hero {
-        background-image: url("../images/evg/evg-thumbnail.jpg");
+        background-image: url("../evg/evg-thumbnail.jpg");
     }
     #curiouscore-hero {
-        background-image: url("../images/curiouscore/curiouscore-thumbnail.jpg");
+        background-image: url("../curiouscore/curiouscore-thumbnail.jpg");
+    }
+    #zoo-hero {
+        background-image: url("../zoonivrse/zoo-thumbnail.jpg");
     }
     .summary {
         display: flex;
@@ -880,6 +902,13 @@ a.left-hover:hover:before {
         display: flex;
         flex-direction: column;
         padding: 1rem 3rem;
+        width: 100%;
+    }
+    .image-single figure {
+        width: 100%;
+    }
+    .image-double figure {
+        width: 80%;
     }
 }   
 
@@ -901,7 +930,7 @@ a.left-hover:hover:before {
         font-size: 3rem;
     }
     .case-study {
-        height: 22.5rem;
+        height: 23rem;
     }
     .case-study-text h2 {
         font-size: 1.25rem;
@@ -971,6 +1000,7 @@ a.left-hover:hover:before {
     }
     .hero {
         height: 300px;
+        /* float: right; */
     }
     h2 {
         font-size: 1.5rem;
