@@ -231,7 +231,7 @@ footer nav a {
 #meet-jingxiu {
     display: grid;
     grid-template-columns: 2fr 1fr; 
-    column-gap: 3rem;
+    column-gap: 4rem;
     margin-top: 6rem;
 }
 #ucl-photo {
