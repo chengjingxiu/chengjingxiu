@@ -909,6 +909,9 @@ a.left-hover:hover:before {
         flex-direction: column;
         width: 80%;
     }
+    .figma-prototype {
+        width: 500px;
+    }
 }   
 
 /*-------------------- For Mobile - 300px -------------------- */
@@ -1036,6 +1039,9 @@ a.left-hover:hover:before {
     }   
     .next-project-text {
         text-align: center;
+    }
+    .figma-prototype {
+        width: 300px;
     }
 }
 
