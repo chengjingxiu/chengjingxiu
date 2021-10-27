@@ -52,7 +52,7 @@ var height = $(".activate-side-nav").outerHeight(); //gets height of "Overview"
 $(window).scroll(function(){
     var windscroll = $(window).scrollTop();
 
-    if (windscroll > (topofDiv+height)) {   // show when user reaches Overview, close when user reaches Other Projects
+    if (windscroll > (topofDiv+height-20)) {   // show when user reaches Overview, close when user reaches Other Projects
        $(".sidenav").fadeIn();                      
 
        $('.case-study-page').each(function(i) {      // highlight active portion
