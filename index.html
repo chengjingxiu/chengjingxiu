@@ -1,35 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio | Jingxiu Cheng</title>
-        <link rel="stylesheet" href="css/styles.css"> <!-- Stylesheet -->
-        <link rel="icon" href="images/favicon.ico"> <!-- favicon-->
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!-- AOS CSS -->
-        <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script> <!-- AOS Script -->
-        <script src="script.js" defer></script> <!-- JavaScript -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> <!-- jQuery -->
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167585898-1"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-167585898-1');
-        </script>
-        <!-- Hotjar Tracking Code for chengjingxiu.com -->
-        <script>
-            (function(h,o,t,j,a,r){
-                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-                h._hjSettings={hjid:1867041,hjsv:6};
-                a=o.getElementsByTagName('head')[0];
-                r=o.createElement('script');r.async=1;
-                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-                a.appendChild(r);
-            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-        </script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Jingxiu Cheng</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Stylesheet -->
+    <link rel="icon" href="home/favicon.ico"> <!-- favicon-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!-- AOS CSS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script> <!-- AOS Script -->
+    <script src="script.js" defer></script> <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> <!-- jQuery -->
+</head>
 
 <body>
 <header>
@@ -50,65 +31,81 @@
         </div> <!-- Page Container-->
     </nav>
 </header>
+
 <div class="page">
     <main>
         <div id="profile">
-            <img id="photo" src="images/photo.jpg" alt="Photo of Jingxiu" width=200px height=auto data-aos="fade-right" data-aos-duration="1500">
-            <h1>Hi, I'm Jingxiu.</h1>
-            <p id="description">I'm a UX designer & researcher with a background in Psychology.<br>I'm currently an MSc Human-Computer Interaction student at UCL.</p>
-            <p id="links">Check out <a class="left-hover" href="#projects">my projects</a>,
-                learn more <a class="left-hover" href="http://chengjingxiu.com/about">about me</a>,
-                or <a class="left-hover" href="mailto:cjingxiu@gmail.com">get in touch</a>!
-            </p>
+             <!-- <img id="photo" src="images/photo.jpg" alt="Photo of Jingxiu" width=200px height=auto data-aos="fade-in" data-aos-duration="1500"> -->
+             <img id="photo" src="home/photo1.jpeg" alt="Photo of Jingxiu">
+             <h1>Hello, I'm Jingxiu!</h1>
+             <p>I am a <strong>UX Designer</strong> and <strong>User Researcher</strong> based in Singapore.<br>
+             I recently graduated with a <strong>MSc in Human-Computer Interaction</strong>.</p>
         </div> <!-- Profile Container-->
         <div id="projects">
             <h1>Featured Projects</h1>
             <div id="featured">
+                <a href="http://chengjingxiu.com/dunnhumby">
+                    <div class="case-study card">
+                        <img src="home/dunnhumby-thumbnail.jpg" width=300px height=auto>
+                        <div class=case-study-text>
+                            <div class=case-study-title>
+                                <h2>Dunnhumby</h2>
+                                <!-- <i id="password-protected" class="fa fa-lock" aria-label="password-protected" aria-hidden="true"></i> -->
+                            </div>
+                            <p class="case-study-description">Designing the interface of a data analysis tool</p>
+                            <div class="tags-container">
+                                <p class="case-study-tag">UX Design</p>
+                                <p class="case-study-tag">Master's Project</p>
+                            </div> <!-- Flexbox for tags-->
+                        </div> <!-- Case Study 1 Text-->
+                    </div> <!-- Case Study 1 Container-->
+                </a>
+                <a href="http://chengjingxiu.com/r&s">
+                    <div class="case-study card">
+                        <img src="home/r&s-thumbnail.jpg" width=300px height=auto>
+                        <div class=case-study-text>
+                            <div class=case-study-title>
+                                <h2>UCL Report & Support</h2>
+                                <!-- <i id="password-protected" class="fa fa-lock" aria-label="password-protected" aria-hidden="true"></i> -->
+                            </div>
+                            <p class="case-study-description">Evaluating a university's reporting platform</p>
+                            <div class="tags-container">
+                                <p class="case-study-tag">User Research</p>
+                                <p class="case-study-tag">Internship</p>
+                            </div> <!-- Flexbox for tags-->
+                        </div> <!-- Case Study 1 Text-->
+                    </div> <!-- Case Study 1 Container-->
+                </a>
                 <a href="http://chengjingxiu.com/evg">
                     <div class="case-study card">
-                        <img src="evg/evg-thumbnail.jpg" width=300px height=auto>
+                        <img src="home/evg-thumbnail.jpg" width=300px height=auto>
                         <div class=case-study-text>
                             <div class=case-study-title>
                                 <h2>Everyday Vegan Grocer</h2>
                                 <!-- <i id="password-protected" class="fa fa-lock" aria-label="password-protected" aria-hidden="true"></i> -->
                             </div>
-                            <p class="case-study-description">Website redesign for an e-commerce store</p>
+                            <p class="case-study-description">Improving the grocery shopping experience</p>
                             <div class="tags-container">
                                 <p class="case-study-tag">UX Design</p>
-                                <p class="case-study-tag">Real-World Project</p>
+                                <p class="case-study-tag">Freelance</p>
                             </div> <!-- Flexbox for tags-->
                         </div> <!-- Case Study 1 Text-->
                     </div> <!-- Case Study 1 Container-->
                 </a>
                 <a href=http://chengjingxiu.com/curiouscore>
                     <div class="case-study card">
-                        <img src="curiouscore/curiouscore-thumbnail.jpg" width=300px height=auto>
+                        <img src="home/curiouscore-thumbnail.jpg" width=300px height=auto>
                         <div class=case-study-text>
                             <div class=case-study-title>
                                 <h2>CuriousCore</h2>
                             </div>
-                            <p class="case-study-description">Website redesign for an education start-up</p>
+                            <p class="case-study-description">Redesigning an education start-up's website</p>
                             <div class="tags-container">
                                 <p class="case-study-tag">User Research</p>
-                                <p class="case-study-tag">Real-World Project</p>
+                                <p class="case-study-tag">Internship</p>
                             </div> <!-- Flexbox for tags-->
                         </div> <!-- Case Study 2 Text-->
                     </div> <!-- Case Study 2 Container-->
-                </a>
-                <a href="http://chengjingxiu.com/zoonivrse">
-                    <div class="case-study card">
-                        <img src="zoonivrse/zoo-thumbnail.jpg" width=300px height=auto>
-                        <div class=case-study-text>
-                            <div class=case-study-title>
-                                <h2>ZooniVRse</h2>
-                            </div>
-                            <p class="case-study-description">Designing an interactive virtual reality zoo</p>
-                            <div class="tags-container">
-                                <p class="case-study-tag">Interaction Design</p>
-                                <p class="case-study-tag">Conceptual Project</p>
-                            </div> <!-- Flexbox for tags-->
-                        </div> <!-- Case Study 1 Text-->
-                    </div> <!-- Case Study 1 Container-->
                 </a>
             </div> <!-- Featured Container -->
         </div> <!-- Projects Container -->
@@ -119,7 +116,7 @@
             <a href="mailto:cjingxiu@gmail.com" aria-label="Send me an email"><i class='far fa-envelope' aria-hidden="true"></i></a>
             <a target="_blank" href="https://www.linkedin.com/in/chengjingxiu/" aria-label="View my LinkedIn profile"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
         </nav>
-        <a id="resumebutton" target="_blank" href="resume.pdf">Download Resume</a>
+        <a id="resumebutton" target="_blank" href="JingxiuCheng_Resume.pdf">Download Resume</a>
         <p id="copyright">© 2021 Designed & Developed by Jingxiu Cheng</p>
     </footer>
 </div> <!-- Page Container -->

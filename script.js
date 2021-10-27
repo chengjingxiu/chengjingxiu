@@ -25,7 +25,6 @@ $(document).ready(function() {
     };
 });
 
-
 // Hamburger Menu //
 $(".hamburger").on("click", function(e) {
     $(".hamburger").toggleClass("is-active");
@@ -47,17 +46,18 @@ window.onscroll = function() {
 }
 
 // Side Navbar //
-var topofDiv = $(".activate-side-nav").offset().top; //gets offset of header
-var height = $(".activate-side-nav").outerHeight(); //gets height of header
+var topofDiv = $(".activate-side-nav").offset().top; //gets offset from "Overview"
+var height = $(".activate-side-nav").outerHeight(); //gets height of "Overview"
+var end = $(".other-projects").offset().top;  //gets offset from "More Projects"
 
 $(window).scroll(function(){
     var windscroll = $(window).scrollTop();
 
-    if (windscroll > (topofDiv + height-100)) {        // show when user reaches Overview 
+    if ((windscroll > (topofDiv+height)) & (windscroll < (end))) {   // show when user reaches Overview, close when user reaches Other Projects
        $(".sidenav").fadeIn();                      
 
        $('.case-study-page').each(function(i) {      // highlight active portion
-            if ($(this).position().top <= windscroll + 120) {
+            if ($(this).position().top <= windscroll + 100) {
                 $('.sidenav a.active').removeClass('active');
                 $('.sidenav a').eq(i).addClass('active');
             }
