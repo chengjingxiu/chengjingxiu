@@ -273,13 +273,16 @@ footer nav a {
 .background-container img {
    margin: auto auto;
 }
+#dsta {                             /* Make DSTA logo center of the container*/
+    grid-template-columns: 1fr;
+}
 /* Vertical ruler */
 .timeline::after {
     content: '';
     position: absolute;
     width: 4px;
     background-color: #555555;
-    top: 10%;           /* Change this to adjust the height of the line */
+    top: 8%;           /* Change this to adjust the height of the line */
     bottom: 0%;         /* Change this to adjust the height of the line */
     left: 50%;
     margin-left: 2px;
@@ -748,7 +751,7 @@ a.left-hover:hover:before {
     /* ----- About ----- */
     /* My Background - Vertical ruler */
     .timeline::after {
-        top: 8%;            /* Change this to adjust the height of the line */
+        top: 7%;            /* Change this to adjust the height of the line */
         bottom: 0%;         /* Change this to adjust the height of the line */
     }
     /* My Background - The circles on the timeline */
@@ -944,7 +947,7 @@ a.left-hover:hover:before {
     }
     /* My Background - Vertical ruler */
     .timeline::after {
-        top: 7%;
+        top: 9%;
         bottom: 0%;
     }
     .timeline-container {
