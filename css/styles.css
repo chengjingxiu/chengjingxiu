@@ -416,12 +416,21 @@ footer nav a {
 .project-details {
     display: grid;
     grid-template-columns: 3fr 4fr 5fr; 
-    grid-template-rows: 4.5rem 4.5rem;
+    grid-template-rows: 1rem 1rem;
     grid-auto-flow: column;
+    row-gap: 3rem;  
     column-gap: 2rem;
     width: 100%;
     margin: 0 auto;
     padding: 1rem 0;
+}
+.featured-project-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1rem 1rem;
+    grid-auto-flow: column;
+    /* column-gap: 2rem; */
+    row-gap: 3rem;  
 }
 .project-details h3 {
     font-size: 1rem;
@@ -448,6 +457,22 @@ footer nav a {
 }
 .summary p {
     margin: 0.5rem 0 1rem;
+}
+.disclaimer {
+    grid-column: 1 / -1;
+    font-style: italic;
+    color: #555555;
+    font-size: 0.9rem;
+}
+.next-project {
+    grid-column: 1 / -1;
+    border-bottom: none;
+    color: #555555;
+    margin-top: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em
 }
 /* --- Side Navigation --- */
 .sidenav {
@@ -505,13 +530,7 @@ footer nav a {
 }
 .other-projects p {
     text-transform: uppercase;
-}
-.next-project-image {
-    margin-left: auto;
-}   
-.next-project-text {
-    text-align: right;
-}
+} 
 .other-projects a:hover img {
     width: 100%;
     transition: all 0.5s ease-in-out;
@@ -519,6 +538,15 @@ footer nav a {
 .other-projects a:hover p {
     font-weight: 600;
 }
+/* ----- Truecast --- */
+#tc-overview, #tc-summary {
+    background-image: linear-gradient(90deg, #f1e6f7 0%, #cc94e2 100%);
+}
+/* ----- PRIZM --- */
+#prizm-overview, #prizm-summary {
+    background-image: linear-gradient(90deg, #E5EFFF 0%, #80BBF8 100%);
+}
+
 /* ----- Dunnhumby --- */
 #dh-overview, #dh-summary {
     background-image: linear-gradient(90deg, #D5CEE6 0%, #5D54ABd0 100%);
@@ -990,12 +1018,6 @@ a.left-hover:hover:before {
     }
     .other-projects-title, .previous-project {
         display: none;
-    }
-    .next-project-image {
-        margin: auto;
-    }   
-    .next-project-text {
-        text-align: center;
     }
     .figma-prototype {
         width: 300px;
