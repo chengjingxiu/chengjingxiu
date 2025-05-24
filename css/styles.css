@@ -132,15 +132,17 @@ footer nav a {
     margin: 9rem auto 3rem;
 }
 #photo {
-    display: block;
+    /* /* display: block; */
     grid-column: 1/2;
     grid-row: 1/3;
-    width: 90%;
+    width: 100%;
     margin-left: auto;
-    /* height: auto; */
-    /* border: 7px solid grey; */
-    border-radius: 50%;
+    border-radius: 50%; 
+    /* width: 50%; */
+    /* order: -1; */
+    /* margin: 0 auto 2rem; */
 }
+
 #profile h1 {
     font-family: 'Lora', serif;
     font-size: 3rem;
@@ -234,16 +236,16 @@ footer nav a {
 /*--- About Me ---*/
 #about-me {
     display: grid;
-    grid-template-columns: 3fr 4fr; 
+    grid-template-columns: 5fr 4fr; 
     column-gap: 4rem;
     margin-top: 4rem;
 }
 #about-photo {
     width: 95%;
     height: auto;
-    grid-column: 1/2;
+    grid-column: 2/3;
     grid-row: 1/4;
-    border-radius: 20%;
+    border-radius: 16px;
 }
 /*--- My Background ---*/
 #my-background h2 {
@@ -273,8 +275,8 @@ footer nav a {
 .background-container img {
    margin: auto auto;
 }
-#dsta {                             /* Make DSTA logo center of the container*/
-    grid-template-columns: 1fr;
+.background-container {         
+    grid-template-columns: 1fr; /* Make logo center of the container*/
 }
 /* Vertical ruler */
 .timeline::after {
@@ -820,7 +822,7 @@ a.left-hover:hover:before {
         font-size: 1.5rem;
     }
     /* ----- About ----- */
-    /* Meet Jingxiu */
+    /* Hi I'm Jingxiu */
     #about-me {
         display: flex;
         flex-direction: column;
@@ -860,26 +862,7 @@ a.left-hover:hover:before {
     #uclic {
         height: 50px;
     }
-    /* My Interests */
-    #my-interests {
-        padding-bottom: 0;
-    }
-    #interests-grid {
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
-    }
-    .interest-card {
-        width: 60%;
-        margin: 2rem auto;
-    }
-    /* Animation - Expandable/Collapsable Card */
-    .expanded {
-        height: 36rem;
-    }
-    .collapsed {
-        height: 22rem;
-    }
+    
     /* ---- Case Studies --- */
     .case-study-page {
         max-width: 500px;
@@ -961,13 +944,6 @@ a.left-hover:hover:before {
     .timeline-right::after {
         left: 103%;
     }
-     /* My Background - Timeline images */
-    .background-container img {
-        height: 80px;
-     }
-     #uclic {
-         height: 35px;
-     }
 
     /* My Interests */
     .interest-card {
