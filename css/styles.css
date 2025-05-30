@@ -458,6 +458,15 @@ footer nav a {
 .summary p {
     margin: 0.5rem 0 1rem;
 }
+.impact {
+    grid-column: 1 / -1;
+    padding-bottom: 2rem;
+}
+.impact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    column-gap: 4rem;
+}
 .disclaimer {
     grid-column: 1 / -1;
     font-style: italic;
@@ -900,6 +909,10 @@ a.left-hover:hover:before {
     }
     .summary h3 {
         padding: 1rem 0 0; 
+    }
+    .impact-grid {
+        display: flex;
+        flex-direction: column;
     }
     .quote-double {
         display: flex;
