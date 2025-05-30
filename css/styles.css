@@ -469,7 +469,6 @@ footer nav a {
 }
 .disclaimer {
     grid-column: 1 / -1;
-    font-style: italic;
     color: #555555;
     font-size: 0.9rem;
 }
